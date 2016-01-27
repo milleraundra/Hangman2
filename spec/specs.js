@@ -1,17 +1,17 @@
 describe("Game", function() {
   it("will randomly select an item from the array, once it is selected ", function() {
     var newHangmanGame = new Game();
-    expect(newHangmanGame.solution).to.equal("trombone");
+    expect(newHangmanGame.solution).to.be.a("string");
   });
 
   it("will split it out into individual letters.", function() {
     var newHangmanGame = new Game();
-    expect(newHangmanGame.solutionArray).to.eql(["t","r","o","m","b","o","n","e"]);
+    expect(newHangmanGame.solutionArray).to.be.a("array");
   });
 
   it("will check the solution word for a chosen letter", function() {
     var newHangmanGame = new Game();
-    expect(newHangmanGame.guess("r").to.eql(true));
+    expect(newHangmanGame.guess("z")).to.equal(false);
   });
 });
 
