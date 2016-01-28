@@ -1,13 +1,18 @@
 var Game = function() {
-  var bandInstruments = ["clarinet", "alto-saxophone", "timpani", "trombone", "flute", "french-horn", "bass-guitar"];
+  var bandInstruments = ["clarinet", "piccolo", "trumpet", "tubas", "alto-saxophone", "timpani", "trombone", "flute", "french-horn", "snare-drum", "tenor saxophone"];
   this.solution = bandInstruments[Math.floor(Math.random()*bandInstruments.length)];
   this.solutionArray = this.solution.split("");
 }
+
 /*** looks through the array for a matching letter ***/
 
 Game.prototype.guess = function(letter) {
+  // debugger;
     for(var i = 0; i < this.solutionArray.length; i++) {
       if (letter === this.solutionArray[i]) {
+
+        // this.solutionArray.findIndex(letter, [], this.solutionArray);
+
         return true;
       } else {
         return false;
@@ -26,6 +31,9 @@ var underscore = function(solutionArray) {
   }
   return underscoreArray.join("");
 }
+
+
+// REVEAL THE CORRECT LETTER
 
 
 

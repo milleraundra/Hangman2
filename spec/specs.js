@@ -20,6 +20,13 @@ describe("Game", function() {
     var testWord = "flute";
     expect(underscore(testWord)).to.eql("_ _ _ _ _ ");
   });
+
+  // it("will return the index of a user's chosen letter in the solution word", function() {
+  //   var newHangmanGame = new Game();
+  //   var newWord
+  //   expect(newHangmanGame.guess("a")).to.equal()
+  // });
+
 });
 // var newGameGame = new Answer();
 // var newPlayer = new Player();
