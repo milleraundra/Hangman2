@@ -3,6 +3,7 @@ var Game = function() {
   this.solution = bandInstruments[Math.floor(Math.random()*bandInstruments.length)];
   this.solutionArray = this.solution.split("");
 }
+/*** looks through the array for a matching letter ***/
 
 Game.prototype.guess = function(letter) {
     for(var i = 0; i < this.solutionArray.length; i++) {
@@ -13,6 +14,19 @@ Game.prototype.guess = function(letter) {
       }
     }
   }
+
+
+// Displays un underscore for each letter in the solution array length
+
+var underscore = function(solutionArray) {
+  var underscoreArray = [];
+
+  for (var i = 0; i < solutionArray.length; i++) {
+    underscoreArray.push('_ ');
+  }
+  return underscoreArray.join("");
+}
+
 
 
 
