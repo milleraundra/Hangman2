@@ -7,18 +7,50 @@ var Game = function() {
 /*** looks through the array for a matching letter ***/
 
 Game.prototype.guess = function(letter) {
-  // debugger;
-    for(var i = 0; i < this.solutionArray.length; i++) {
-      if (letter === this.solutionArray[i]) {
 
-        // this.solutionArray.findIndex(letter, [], this.solutionArray);
+  var letterLocations = [];
+  for(var i = 0; i < this.solutionArray.length; i++) {
 
-        return true;
-      } else {
-        return false;
-      }
-    }
+    if (letter === this.solutionArray[i]) {
+      letterLocations.push(i);
+
+    } else {}
   }
+
+  if (letterLocations.length !== 0) {
+    return letterLocations;
+  } else {
+    return false;
+
+// var click = 0;
+// if (click < 6) {
+//   click += 1;
+//}
+// else {return alert
+//
+//}
+
+
+    //   if (click === 1) {
+    //     show img 1
+    //   }
+    //   else if (click === 2) {
+    //     show img 2
+    //   }
+    //   else if (click === 3) {
+    //     show img 3
+    //   }
+    //   else if (click === 4) {
+    //     show img 4
+    //   }
+    //   else if (click === 5) {
+    //     show img 5
+    //   }
+    //   else {
+    //     show img 6
+      // }
+  }
+};
 
 
 // Displays un underscore for each letter in the solution array length
@@ -35,34 +67,6 @@ var underscore = function(solutionArray) {
 
 // REVEAL THE CORRECT LETTER
 
-
-
-
-
-  //attempted .indexOf();
-      // var guess = "r";
-      // this.solutionArray.indexOf("r");
-      // if (indexOf >= 0) {
-      //   return true;
-      // } else {
-      //   return false;
-      // }
-
-
-
-  //Attempted REGEX
-      // // var guess = "r";
-      // var re = /r/g;
-      // // console.log(re);
-      // var match = re.exec(this.solutionArray);
-      //
-      // if (??) {
-      //   return true;
-      // }
-      // else {
-      //   return false;
-      // }
-      //
 
   // var re = /guess/; //make this global
   // console.log(re);

@@ -11,7 +11,7 @@ describe("Game", function() {
 
   it("will check the solution word for a chosen letter", function() {
     var newHangmanGame = new Game();
-    expect(newHangmanGame.guess("z")).to.equal(false);
+    expect(newHangmanGame.guess("z")).to.equal();
   });
 
 
@@ -21,11 +21,18 @@ describe("Game", function() {
     expect(underscore(testWord)).to.eql("_ _ _ _ _ ");
   });
 
-  // it("will return the index of a user's chosen letter in the solution word", function() {
-  //   var newHangmanGame = new Game();
-  //   var newWord
-  //   expect(newHangmanGame.guess("a")).to.equal()
-  // });
+  it("will return the index of a user's chosen letter in the solution word", function() {
+    var newHangmanGame = new Game();
+    newHangmanGame.solutionArray = ["t", "r", "o", "m", "b", "o", "n", "e"];
+      expect(newHangmanGame.guess("o")).to.eql([2, 5]);
+  });
+
+  it("will return an empty array each input that does not match the solutionArray", function() {
+    var newHangmanGame = new Game();
+    newHangmanGame.solutionArray = ["t", "r", "o", "m", "b", "o", "n", "e"];
+    // debugger;
+    expect(newHangmanGame.guess("a")).to.equal(false);
+  });
 
 });
 // var newGameGame = new Answer();
