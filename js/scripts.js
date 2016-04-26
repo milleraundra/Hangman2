@@ -30,7 +30,6 @@ Game.prototype.guess = function(letter) {
 //
 //}
 
-
     //   if (click === 1) {
     //     show img 1
     //   }
@@ -51,7 +50,6 @@ Game.prototype.guess = function(letter) {
       // }
   }
 };
-
 
 // Displays un underscore for each letter in the solution array length
 

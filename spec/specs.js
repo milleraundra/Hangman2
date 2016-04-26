@@ -11,9 +11,8 @@ describe("Game", function() {
 
   it("will check the solution word for a chosen letter", function() {
     var newHangmanGame = new Game();
-    expect(newHangmanGame.guess("z")).to.equal();
+    expect(newHangmanGame.guess("z")).to.equal(false);
   });
-
 
   it("will display an underscore for each letter in the array", function() {
     var newHangmanGame = new Game();
@@ -30,7 +29,6 @@ describe("Game", function() {
   it("will return an empty array each input that does not match the solutionArray", function() {
     var newHangmanGame = new Game();
     newHangmanGame.solutionArray = ["t", "r", "o", "m", "b", "o", "n", "e"];
-    // debugger;
     expect(newHangmanGame.guess("a")).to.equal(false);
   });
 
